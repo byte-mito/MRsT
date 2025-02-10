@@ -1,0 +1,7 @@
+.history-box {
+    width: 300px;
+    height: 200px;
+    background: url('history.png') no-repeat center;
+    image-rendering: pixelated;
+    padding: 10px;
+}
