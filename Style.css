@@ -30,7 +30,7 @@ h1 {
 }
 
 body {
-    background: url('background.png') repeat;
+    background: url('background.jpg') repeat;
     background-size: auto;
     image-rendering: pixelated;
 }
