@@ -1,0 +1,8 @@
+button {
+    background: url('button.png') no-repeat center;
+    image-rendering: pixelated; 
+    width: 64px;
+    height: 32px;
+    border: none;
+    cursor: pointer;
+}
