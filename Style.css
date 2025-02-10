@@ -43,6 +43,42 @@ button:hover {
     background: #0056b3;
 }
 
+/* Nút bấm chung */
+button {
+    width: 80px;
+    height: 40px;
+    background-size: contain;
+    image-rendering: pixelated;
+    border: none;
+    cursor: pointer;
+}
+
+.personA.start {
+    background: url('R1.png') no-repeat center;
+}
+
+.personA.stop {
+    background: url('R2.png') no-repeat center;
+}
+
+.personB.start {
+    background: url('M1.png') no-repeat center;
+}
+
+
+.personB.stop {
+    background: url('M1.png') no-repeat center;
+}
+
+button:hover {
+    opacity: 0.8; 
+}
+
+button:active {
+    opacity: 0.6;
+}
+
+
 /*font*/
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
