@@ -8,28 +8,27 @@ button {
     cursor: pointer;
 }
 
-/* Nút cho R */
-.personA {
+.personA.start {
     background: url('R1.png') no-repeat center;
 }
 
-.personA:hover {
-    background: url('R2r.png');
+.personA.stop {
+    background: url('R2.png') no-repeat center;
 }
 
-.personA:active {
-    background: url('R3.png');
-}
-
-/* Nút cho M */
-.personB {
+.personB.start {
     background: url('M1.png') no-repeat center;
 }
 
-.personB:hover {
-    background: url('M2.png');
+
+.personB.stop {
+    background: url('M1.png') no-repeat center;
 }
 
-.personB:active {
-    background: url('M3.png');
+button:hover {
+    opacity: 0.8; 
+}
+
+button:active {
+    opacity: 0.6;
 }
