@@ -1,0 +1,5 @@
+<button id="startA" class="button personA"></button>
+<button id="stopA" class="button personA"></button>
+
+<button id="startB" class="button personB"></button>
+<button id="stopB" class="button personB"></button>
