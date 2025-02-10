@@ -29,18 +29,10 @@ h1 {
     border-radius: 8px;
 }
 
-button {
-    background: #007BFF;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    margin: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #0056b3;
+body {
+    background: url('background.png') repeat;
+    background-size: auto;
+    image-rendering: pixelated;
 }
 
 /* Nút bấm chung */
@@ -52,49 +44,25 @@ button {
     border: none;
     cursor: pointer;
 }
-
 .personA.start {
     background: url('R1.png') no-repeat center;
 }
-
 .personA.stop {
     background: url('R2.png') no-repeat center;
 }
-
 .personB.start {
     background: url('M1.png') no-repeat center;
 }
-
-
 .personB.stop {
     background: url('M1.png') no-repeat center;
 }
-
 button:hover {
     opacity: 0.8; 
 }
-
 button:active {
     opacity: 0.6;
 }
 
-
-/*font*/
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
-#clock, .timer p {
-    font-family: 'Press Start 2P', cursive;
-    font-size: 24px;
-    image-rendering: pixelated;
-}
-
-/*bg*/
-body {
-    background: url('background.png') repeat;
-    image-rendering: pixelated;
-}
-
-/*history*/
 #history {
     width: 90%;
     max-width: 320px;
@@ -103,4 +71,29 @@ body {
     background-size: contain;
     image-rendering: pixelated;
     overflow-y: scroll;
+    color: white;
+    font-size: 14px;
+    font-family: 'Press Start 2P', sans-serif;
 }
+
+img {
+    image-rendering: pixelated;
+    width: auto;
+    height: auto;
+}
+
+#clock {
+    width: 80%;
+    max-width: 300px;
+    height: 64px;
+    background: url('clock.png') no-repeat center;
+    background-size: contain;
+    image-rendering: pixelated;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Press Start 2P', sans-serif;
+    color: white;
+}
+
+
+
