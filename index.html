@@ -31,5 +31,84 @@
     </div>
 
     <script src="script.js"></script>
+    <script>
+    function updateClock() {
+        let now = new Date();
+        let hours = String(now.getHours()).padStart(2, '0');
+        let minutes = String(now.getMinutes()).padStart(2, '0');
+        let seconds = String(now.getSeconds()).padStart(2, '0');
+
+        document.getElementById("clock").innerText = `${hours}:${minutes}:${seconds}`;
+    }
+
+    setInterval(updateClock, 1000); // Cập nhật mỗi giây
+    updateClock(); // Chạy ngay khi mở trang
+</script>
+
+<script>
+    let timerA = 0, timerB = 0; // Thời gian của từng người
+    let intervalA, intervalB;   // Biến để chạy setInterval
+
+    function startTimer(player) {
+        if (player === "A" && !intervalA) {
+            intervalA = setInterval(() => {
+                timerA++;
+                updateHistory("A", timerA);
+            }, 1000);
+        }
+        if (player === "B" && !intervalB) {
+            intervalB = setInterval(() => {
+                timerB++;
+                updateHistory("B", timerB);
+            }, 1000);
+        }
+    }
+
+    function stopTimer(player) {
+        if (player === "A") {
+            clearInterval(intervalA);
+            intervalA = null;
+            saveHistory("A", timerA);
+            timerA = 0; // Reset sau khi lưu
+        }
+        if (player === "B") {
+            clearInterval(intervalB);
+            intervalB = null;
+            saveHistory("B", timerB);
+            timerB = 0;
+        }
+    }
+
+    function updateHistory(player, time) {
+        let history = document.getElementById("history");
+        let display = player === "A" ? `🟢 Người A: ${time} giây` : `🔵 Người B: ${time} giây`;
+        history.innerText = display;
+    }
+
+    function saveHistory(player, time) {
+        let historyList = document.getElementById("history-list");
+        let newEntry = document.createElement("li");
+        newEntry.innerText = `${new Date().toLocaleTimeString()} - ${player === "A" ? "Người A" : "Người B"}: ${time} giây`;
+        historyList.appendChild(newEntry);
+    }
+</script>
+
+<div id="history-container">
+    <h3>History</h3>
+    <p id="history">Chưa có ai bấm giờ.</p>
+    <ul id="history-list"></ul>
+</div>
+
+
+<div class="button-container">
+    <button class="startA" onclick="startTimer('A')"></button>
+    <button class="stopA" onclick="stopTimer('A')"></button>
+    <button class="startB" onclick="startTimer('B')"></button>
+    <button class="stopB" onclick="stopTimer('B')"></button>
+</div>
+
+
+
+    
 </body>
 </html>
